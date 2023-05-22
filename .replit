@@ -1,0 +1,10 @@
+run = "gawk -f program.awk"
+entrypoint = "program.awk"
+
+hidden = ["package-lock.json", "package.json"]
+
+[languages.awk]
+pattern = "**/*.awk"
+
+  [languages.awk.languageServer]
+  start = ["npx", "awk-language-server"]
